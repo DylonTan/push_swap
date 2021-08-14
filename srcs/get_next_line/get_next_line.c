@@ -71,7 +71,7 @@ static int	read_line(int fd, char **buff, int *bytes)
 {
 	int	b;
 
-	b = read(fd, *buff, BUFFER_SIZE);
+	b = read(fd, *buff, 1024);
 	*bytes = b;
 	return (b);
 }
@@ -83,9 +83,9 @@ char	*get_next_line(int fd)
 	char		*temp;
 	int			bytes;
 
-	if (fd < 0 || fd > 1024 || BUFFER_SIZE < 1)
+	if (fd < 0 || fd > 1024 || 1024 < 1)
 		return (NULL);
-	buff = (char *) malloc(sizeof(char) * (BUFFER_SIZE + 1));
+	buff = (char *) malloc(sizeof(char) * (1024 + 1));
 	if (!buff)
 		return (NULL);
 	while (read_line(fd, &buff, &bytes) > 0)
