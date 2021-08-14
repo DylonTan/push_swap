@@ -5,7 +5,7 @@
 
 int	ft_is_valid_instruction(char *instruction)
 {
-	int	len;
+	int len;
 
 	len = ft_strlen(instruction);
 	if (ft_strncmp(instruction, "sa\n", len) == 0)
@@ -42,7 +42,7 @@ int	main(int argc, char **argv)
 		{
 			if (ft_strncmp(instruction, "\n", ft_strlen(instruction)) == 0)
 				break ;
-			if (ft_is_valid_instruction(instruction))
+			else if (ft_is_valid_instruction(instruction))
 				ft_run_instructions(&stack_a, &stack_b, instruction, 0);
 			else
 			{
