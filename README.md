@@ -1,5 +1,5 @@
 # push_swap
-A program that sorts numbers with 2 stacks and a limited set of instructions
+**Core**: A program that sorts numbers with 2 stacks and a limited set of instructions
 
 **Bonus**: A checker to validate the output of the sorting algorithm
 
